@@ -1,2 +1,2 @@
 # responsive-react-website
-A responsive React website
+A responsive React website (SPA) 
