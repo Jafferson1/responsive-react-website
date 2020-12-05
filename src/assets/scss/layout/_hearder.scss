@@ -1,0 +1,10 @@
+header .container {
+    @include flexCenter(space-between);
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+    .brand {
+        color: $white;    
+        padding: 15px 0;
+    }
+}
