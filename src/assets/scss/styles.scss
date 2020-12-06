@@ -1,8 +1,12 @@
 
 @import 'utils/colors', 'utils/typography';
 
-@import 'core/base', 'core/fonts';
+@import 'base/global', 'base/fonts';
 
 @import 'helpers/mixins';
 
-@import 'layout/hearder';
+@import 'elements/button';
+
+@import 'layout/hearder', 'layout/footer', 'layout/main';
+
+@import 'sections/hero', 'sections/introduction';

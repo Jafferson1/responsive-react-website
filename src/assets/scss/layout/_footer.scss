@@ -1,0 +1,53 @@
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: $primary;
+}
+
+footer .container {
+    @include flexCenter(space-between);
+    width: 90%;
+    max-width: 980px;
+    margin: auto;
+    .brand {
+        color: $white;
+        padding: 2rem 0;
+    }
+}
+
+.footer-social ul {
+    display: flex;
+    li {
+        list-style: none;
+    }
+    a {
+        padding: 2rem;
+        svg {
+            fill: $white;
+            transition: fill 0.15s ease;
+        }
+        &:hover {
+            svg {
+                fill: $btn-primary-hover;
+            }
+        }
+    }
+}
+
+.footer-nav nav ul {
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: $white;
+        font-size: 1.4rem;
+        transition: all 250ms linear 0s;
+    }
+    a:hover {
+        color: $btn-primary-hover;
+    }
+}
