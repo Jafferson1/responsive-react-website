@@ -5,6 +5,7 @@ import { createBrowserHistory } from "history";
 import "../src/assets/scss/styles.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import 'font-awesome/css/font-awesome.min.css';
 
 const history = createBrowserHistory();
 
