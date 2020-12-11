@@ -1,13 +1,10 @@
 import React from "react";
 import classNames from "classnames";
 
-const Button = ({ color, size, text, disabled }) => {
-  const classes = classNames(
-    color && `button-${color}`,
-    size && `button-${size}`
-  );
+const Button = ({ size, text, icon, disabled }) => {
   return (
-    <button className={classes} disabled={disabled}>
+    <button className={classNames(size && `button-${size}`)} disabled={disabled}>
+      {icon && <i className={classNames(`fa ${icon} fa-lg`)}></i>}
       {text}
     </button>
   );

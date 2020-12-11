@@ -7,9 +7,12 @@ const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <Logo />
-        <FooterSocial />
-        <FooterNav />
+        <Logo className="brand" />
+        <FooterSocial className="footer-social" />
+        <FooterNav className="footer-nav" />
+        <div className="footer-copyright">
+          2020 Beats&copy;. All right reserved
+        </div>
       </div>
     </footer>
   );

@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "../elements/Image";
-import img02 from "../../assets/images/img-02.svg";
+import img03 from "../../assets/images/img-03.svg";
 import classNames from "classnames";
 
-const Introduction = ({ section, className }) => {
+const HowItWorks = ({ section, className }) => {
   return (
     <div id={section} className={classNames(className)}>
       <div className="container">
-        <Image src={img02} width={400} height={400} alt="plan" />
         <div>
           <h1>Desafie seus amigos</h1>
           <p>
@@ -17,8 +16,9 @@ const Introduction = ({ section, className }) => {
             and scrambled it to make a type specimen book.
           </p>
         </div>
+        <Image src={img03} width={450} height={450} alt="plan" />
       </div>
     </div>
   );
 };
-export default Introduction;
+export default HowItWorks;

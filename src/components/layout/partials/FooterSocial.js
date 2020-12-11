@@ -1,8 +1,9 @@
 import React from "react";
+import classNames from "classnames";
 
-const FooterSocial = () => {
+const FooterSocial = ({ className }) => {
   return (
-    <div className="footer-social">
+    <div className={classNames(className)}>
       <ul>
         <li>
           <a href="https://facebook.com/">

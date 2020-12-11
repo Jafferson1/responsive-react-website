@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "../elements/Image";
-import img02 from "../../assets/images/img-02.svg";
+import img05 from "../../assets/images/img-05.svg";
 import classNames from "classnames";
 
-const Introduction = ({ section, className }) => {
+const Conclusion = ({ section, className }) => {
   return (
     <div id={section} className={classNames(className)}>
       <div className="container">
-        <Image src={img02} width={400} height={400} alt="plan" />
+        <Image src={img05} width={450} height={450} alt="plan" />
         <div>
           <h1>Desafie seus amigos</h1>
           <p>
@@ -21,4 +21,4 @@ const Introduction = ({ section, className }) => {
     </div>
   );
 };
-export default Introduction;
+export default Conclusion;
