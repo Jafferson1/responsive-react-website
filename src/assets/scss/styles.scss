@@ -1,12 +1,11 @@
+@import "settings/colors", "settings/fonts";
 
-@import 'utils/colors', 'utils/typography';
+@import "abstracts/mixins";
 
-@import 'base/global', 'base/fonts';
+@import "base/fonts";
 
-@import 'helpers/mixins';
+@import "base/global";
 
-@import 'elements/button';
+@import "elements/button";
 
-@import 'layout/hearder', 'layout/footer', 'layout/main';
-
-@import 'sections/hero', 'sections/introduction';
+@import "layout/header", "layout/main", "layout/footer";

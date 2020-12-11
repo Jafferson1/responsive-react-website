@@ -1,0 +1,147 @@
+header {
+    //background-color: $theme;
+    background: linear-gradient(90deg, #30a0ea, #4508a2);
+
+    .container {
+        @include flex-center(space-between);
+
+        @include content-width();
+
+        .brand {
+            color: $white;
+            padding: 15px 0;
+        }
+        .menu {
+            nav ul {
+                display: flex;
+                li {
+                    list-style: none;
+                }
+                a {
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 1.4rem;
+                    padding: 2.4rem;
+                    font-weight: bold;
+                    transition: all 250ms linear 0s;
+                }
+                a:hover {
+                    //color: black;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.hamburguer {
+    display: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Media queries */
+
+@media (max-width: 890px) {
+    .menu nav {
+        display: none;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .one,
+    .two,
+    .three {
+        background-color: #fff;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+        transition: all 250ms linear 0s;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    .menu.is-active {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        //background-color: $theme;
+        background: linear-gradient(90deg, #30a0ea, #4508a2);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu.is-active nav {
+        display: block;
+    }
+
+    .menu.is-active .menu-toggle {
+        position: absolute;
+        right: 25px;
+        top: 15px;
+    }
+
+    .menu.is-active .menu-toggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu.is-active .menu-toggle .two {
+        opacity: 0;
+    }
+
+    .menu.is-active .menu-toggle .three {
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+
+    .menu.is-active nav ul {
+        text-align: center;
+        display: block;
+    }
+
+    .menu.is-active nav ul a {
+        transition: all 250ms linear 0s;
+        font-size: 3rem;
+        line-height: 4rem;
+        display: block;
+    }
+}
+
+@media (max-width: 630px) {
+}
+
+@media (max-width: 540px) {
+    .menu.is-active nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            flex: 0 0 50%;
+        }
+        a {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .menu.is-active nav ul {
+        display: flex;
+        flex-direction: column;
+        a {
+            font-size: 1.5rem;
+        }
+    }
+}

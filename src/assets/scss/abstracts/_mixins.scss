@@ -1,12 +1,18 @@
-@mixin flexCenter($justify) {
+@mixin flex-center($justify) {
     display: flex;
     align-items: center;
     justify-content: $justify;
 }
 
-@mixin flexCenterDirection($direction) {
+@mixin flex-center-direction($direction) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: $direction;
+}
+
+@mixin content-width() {
+    width: 88%;
+    max-width: 100%;
+    margin: auto;
 }

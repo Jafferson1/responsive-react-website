@@ -1,53 +1,89 @@
 footer {
     position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: $primary;
-}
+    background-color: $black;
 
-footer .container {
-    @include flexCenter(space-between);
-    width: 90%;
-    max-width: 980px;
-    margin: auto;
-    .brand {
-        color: $white;
-        padding: 2rem 0;
-    }
-}
+    .container {
+        @include flex-center-direction(column);
+        @include content-width();
 
-.footer-social ul {
-    display: flex;
-    li {
-        list-style: none;
-    }
-    a {
-        padding: 2rem;
-        svg {
-            fill: $white;
-            transition: fill 0.15s ease;
+        .brand {
+            color: $white;
+            padding: 2rem 0;
         }
-        &:hover {
-            svg {
-                fill: $btn-primary-hover;
+
+        .footer-social ul {
+            display: flex;
+
+            li {
+                list-style: none;
+            }
+            a {
+                padding: 2rem;
+                svg {
+                    fill: $white;
+                    transition: fill 0.15s ease;
+                }
+                &:hover {
+                    svg {
+                        fill: rgb(91, 189, 235);
+                    }
+                }
             }
         }
+
+        .footer-nav {
+            margin: 2rem auto;
+
+            nav ul {
+                padding: 0;
+                margin: 10px;
+                display: flex;
+            }
+
+            li {
+                list-style: none;
+                margin: 0px 5px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $white;
+                font-size: 1.4rem;
+                transition: all 250ms linear 0s;
+            }
+            a:hover {
+                //color: $btn-hover;
+                text-decoration: underline;
+            }
+        }
+
+        .footer-copyright {
+            padding: 10px 0px;
+            color: $white;
+            font-size: 1.2rem;
+        }
     }
 }
 
-.footer-nav nav ul {
-    li {
-        list-style: none;
+@media (max-width: 730px) {
+    .footer-nav nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            flex: 0 0 40%;
+        }
     }
-    a {
-        text-decoration: none;
-        color: $white;
-        font-size: 1.4rem;
-        transition: all 250ms linear 0s;
+}
+
+@media (max-width: 455px) {
+    .footer-nav nav ul {
+        flex-direction: column;
     }
-    a:hover {
-        color: $btn-primary-hover;
+
+    footer .container {
+        .footer-copyright {
+            font-size: 1rem;
+        }
     }
 }
