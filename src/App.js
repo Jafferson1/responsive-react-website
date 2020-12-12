@@ -5,7 +5,7 @@ import Main from "./layout/Main";
 const App = () => {
   return (
     <Switch>
-      <Route exact path="/" render={() => <Wrapper main={<Main />} />} />
+      <Route exact path="/" render={() => <Wrapper Component={Main} />} />
     </Switch>
   );
 };
