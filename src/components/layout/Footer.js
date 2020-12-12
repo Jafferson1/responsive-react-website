@@ -11,7 +11,7 @@ const Footer = () => {
         <FooterSocial className="footer-social" />
         <FooterNav className="footer-nav" />
         <div className="footer-copyright">
-          2020 Beats&copy;. All right reserved
+          2020 Hypotheses&copy;. All right reserved
         </div>
       </div>
     </footer>
